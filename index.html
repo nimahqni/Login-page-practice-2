@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login-page</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Google Font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+  </style>
+</head>
+<body>
+
+  <!-- Main card container -->
+  <div class="card">
+
+    <!-- Left section: Login form -->
+    <div class="content">
+      <!-- Logo for desktop -->
+      <img src="/img/Logo.png" alt="Fingger logo" class="logo desktop-only" />
+
+      <h2>Login</h2>
+      <h3>Please enter your credentials</h3>
+
+      <form action="#">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+
+        <div class="row">
+          <label>
+            <input type="checkbox" checked /> Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+
+    <!-- Right section: Illustration with gradient background -->
+    <div class="hero">
+      <!-- Logo for mobile -->
+      <img src="/img/Logo.png" alt="Fingger logo" class="logo mobile-only" />
+      
+      <!-- Centered SVG/image illustration -->
+      <img src="/img/Mobile login-bro.svg" alt="Login illustration" class="graphic" />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* Base reset and font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Body background and layout */
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #dfdbfc;
+  color: #312e37;
+}
+
+/* Theme colors */
+:root {
+  --color-primary: #816ce0;
+  --color-muted: #b4b4b4;
+  --color-border: #a9a9a9;
+}
+
+/* Main container */
+.card {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 16px;
+  width: 90vw;
+  max-width: 960px;
+  box-shadow: 0 20px 54px rgba(126, 48, 255, 0.12);
+  overflow: hidden;
+}
+
+/* Left section - Login form */
+.content {
+  width: 50%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right section - Purple background + image */
+.hero {
+  width: 50%;
+  background: linear-gradient(45deg, #7386d8, #ac5df1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  width: 58%;
+  height: 60px;
+  margin-bottom: 32px;
+}
+
+/* Illustration image */
+.graphic {
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Desktop-only and mobile-only visibility */
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
+/* Headings */
+h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+h3 {
+  color: var(--color-muted);
+  margin-bottom: 32px;
+  font-weight: normal;
+}
+
+/* Input & button base styles */
+input,
+button {
+  font-size: 16px;
+  border-radius: 6px;
+  height: 48px;
+  padding: 0 16px;
+}
+
+/* Form fields */
+form > input {
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: inherit;
+}
+form > input::placeholder {
+  color: var(--color-muted);
+}
+
+/* Row with checkbox and link */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+
+/* Link styles */
+form a {
+  font-size: 14px;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+/* Submit button */
+form > button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Footer paragraph */
+p {
+  font-size: 14px;
+  margin-top: 32px;
+  color: var(--color-muted);
+}
+p a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ------------------------------------ */
+/* RESPONSIVE DESIGN FOR SMALL SCREENS */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+  /* Stack card vertically */
+  .card {
+    flex-direction: column-reverse;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  /* Full-width form */
+  .content {
+    width: 100%;
+    padding: 32px 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjust hero box */
+  .hero {
+    width: 100%;
+    padding: 24px;
+    height: auto;
+  }
+
+  /* Hide illustration */
+  .graphic {
+    display: none;
+  }
+
+  /* Show mobile logo */
+  .mobile-only {
+    display: block;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  /* Hide desktop logo */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Scale logo */
+  .logo {
+    height: 48px;
+  }
+
+  /* Full-width form and button */
+  form,
+  form > button {
+    width: 100%;
+  }
+}
